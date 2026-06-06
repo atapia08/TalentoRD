@@ -13,9 +13,9 @@ dist/
 build/
 tmp/
 *.log
+site/verify-*.png
 
 # Configuracion sensible
 .env
 .env.*
 !.env.example
-

@@ -22,7 +22,12 @@ Validar la idea con un sitio manual en WordPress.com antes de invertir en WordPr
 
 - Landing page: `docs/wordpress-com/landing-validacion.md`
 - Formularios de lista de espera: `docs/wordpress-com/formularios-lista-espera.md`
+- Landing codificada: `site/index.html`
 - Meta: 5,000 talentos registrados y 500 empresas en lista de espera.
+
+## Vista local
+
+Abrir `site/index.html` en el navegador o servir la carpeta `site/` con un servidor local.
 
 ## Estructura
 
