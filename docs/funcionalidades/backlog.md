@@ -6,6 +6,7 @@
 - Botones Soy talento y Soy empresa.
 - Formulario de registro de talento.
 - Formulario de lista de espera de empresas.
+- Contador real conectado a registros.
 - Menu simple o anclas internas.
 - Politica de privacidad.
 - Analitica basica.

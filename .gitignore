@@ -15,6 +15,10 @@ tmp/
 *.log
 site/verify-*.png
 
+# Datos locales exportados
+data/waitlist.json
+data/waitlist.local.json
+
 # Configuracion sensible
 .env
 .env.*

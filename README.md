@@ -27,7 +27,17 @@ Validar la idea con un sitio manual en WordPress.com antes de invertir en WordPr
 
 ## Vista local
 
-Abrir `site/index.html` en el navegador o servir la carpeta `site/` con un servidor local.
+Para usar el contador real y guardar registros:
+
+```bash
+node server.js
+```
+
+Luego abrir `http://localhost:4173/`.
+
+Los registros se guardan localmente en `data/waitlist.json`. Ese archivo esta ignorado por Git porque puede contener correos y WhatsApp. La plantilla versionada es `data/waitlist.example.json`.
+
+Detalle tecnico: `docs/desarrollo/contador-real.md`.
 
 ## Estructura
 

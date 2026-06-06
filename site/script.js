@@ -1,18 +1,4 @@
-const storageKey = "talentord_waitlist";
-
-function readEntries() {
-  try {
-    return JSON.parse(localStorage.getItem(storageKey)) || [];
-  } catch {
-    return [];
-  }
-}
-
-function saveEntry(entry) {
-  const entries = readEntries();
-  entries.push(entry);
-  localStorage.setItem(storageKey, JSON.stringify(entries));
-}
+const numberFormatter = new Intl.NumberFormat("en-US");
 
 function getConfirmation(type) {
   if (type === "talento") {
@@ -22,9 +8,57 @@ function getConfirmation(type) {
   return "Gracias por unirte a la lista de espera. Tu interes nos ayuda a validar la demanda real.";
 }
 
+function formatProgress(item) {
+  return `${numberFormatter.format(item.current)}/${numberFormatter.format(item.goal)}`;
+}
+
+function progressPercent(item) {
+  return `${Math.min((item.current / item.goal) * 100, 100).toFixed(2)}%`;
+}
+
+function updateCounter(type, item) {
+  document.querySelectorAll(`[data-counter="${type}"] [data-count-label]`).forEach((label) => {
+    label.textContent = formatProgress(item);
+  });
+
+  document.querySelectorAll(`[data-progress="${type}"]`).forEach((progress) => {
+    progress.querySelector("[data-count-label]").textContent = formatProgress(item);
+    progress.querySelector("[data-progress-bar]").style.width = progressPercent(item);
+  });
+}
+
+async function loadStats() {
+  const response = await fetch("/api/stats", { cache: "no-store" });
+  if (!response.ok) throw new Error("No se pudo cargar el contador");
+
+  const stats = await response.json();
+  updateCounter("talento", stats.talento);
+  updateCounter("empresa", stats.empresa);
+}
+
+async function submitRegistration(type, data) {
+  const response = await fetch("/api/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ type, data }),
+  });
+
+  const payload = await response.json();
+
+  if (!response.ok) {
+    throw new Error(payload.error || "No se pudo guardar el registro");
+  }
+
+  updateCounter("talento", payload.stats.talento);
+  updateCounter("empresa", payload.stats.empresa);
+}
+
 document.querySelectorAll(".signup-form").forEach((form) => {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    const status = form.querySelector(".form-status");
 
     if (!form.checkValidity()) {
       form.reportValidity();
@@ -34,14 +68,20 @@ document.querySelectorAll(".signup-form").forEach((form) => {
     const data = Object.fromEntries(new FormData(form).entries());
     const type = form.dataset.type;
 
-    saveEntry({
-      type,
-      data,
-      createdAt: new Date().toISOString(),
-      source: "landing-estatica",
-    });
+    status.textContent = "Guardando registro...";
 
-    form.reset();
-    form.querySelector(".form-status").textContent = getConfirmation(type);
+    try {
+      await submitRegistration(type, data);
+      form.reset();
+      status.textContent = getConfirmation(type);
+    } catch (error) {
+      status.textContent = error.message;
+    }
+  });
+});
+
+loadStats().catch(() => {
+  document.querySelectorAll(".form-status").forEach((status) => {
+    status.textContent = "El contador real no esta disponible. Revisa que el servidor Node este corriendo.";
   });
 });
