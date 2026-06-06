@@ -40,4 +40,4 @@ Antes de escribir codigo o invertir en un MVP, TalentoRD debe validar si existe 
 
 Implicacion:
 
-La meta de validacion sera conseguir 5,000 talentos registrados y 500 empresas en lista de espera. Si se alcanza esa evidencia, el proyecto puede justificar inversion en el MVP y posterior migracion a WordPress.org.
+La meta de validacion sera conseguir 10,000 talentos registrados y 1,000 empresas en lista de espera. Si se alcanza esa evidencia, el proyecto puede justificar inversion en el MVP y posterior migracion a WordPress.org.

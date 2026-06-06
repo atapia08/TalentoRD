@@ -11,7 +11,7 @@
 - [ ] Formulario de Registro de Talento creado.
 - [ ] Formulario de Empresas y Aliados creado.
 - [ ] Formularios conectados desde los botones principales.
-- [ ] Meta de validacion documentada: 5,000 talentos y 500 empresas.
+- [ ] Meta de validacion documentada: 10,000 talentos y 1,000 empresas.
 - [ ] Politica de privacidad creada.
 - [ ] Formularios probados.
 - [ ] Confirmaciones de formulario revisadas.

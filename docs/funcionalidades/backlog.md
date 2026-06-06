@@ -15,7 +15,7 @@
 
 - Base de datos exportable de registros.
 - Segmentacion de talentos por area.
-- Seguimiento de meta: 5,000 talentos y 500 empresas.
+- Seguimiento de meta: 10,000 talentos y 1,000 empresas.
 - Emails de seguimiento.
 - Pagina de preguntas frecuentes.
 - Publicaciones de oportunidades o recursos.

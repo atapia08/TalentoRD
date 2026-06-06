@@ -6,7 +6,7 @@ Validar demanda antes de escribir codigo o invertir en un MVP completo.
 
 ## Tesis
 
-Si TalentoRD consigue 5,000 talentos y 500 empresas en lista de espera, existe evidencia suficiente para invertir en el MVP.
+Si TalentoRD consigue 10,000 talentos y 1,000 empresas en lista de espera, existe evidencia suficiente para invertir en el MVP.
 
 ## Landing
 
@@ -57,8 +57,8 @@ TalentoRD.com puede convertirse en una marca pais, no solo en una plataforma de 
 
 ## Meta De Validacion
 
-- 5,000 talentos registrados.
-- 500 empresas en lista de espera.
+- 5,003 de 10,000 talentos registrados.
+- 517 de 1,000 empresas en lista de espera.
 
 ## Senales Para Invertir En MVP
 
@@ -75,4 +75,3 @@ TalentoRD.com puede convertirse en una marca pais, no solo en una plataforma de 
 - Poco interes despues de promocion inicial.
 - La propuesta no se entiende sin explicacion adicional.
 - La audiencia responde mejor a comunidad o contenido que a plataforma.
-

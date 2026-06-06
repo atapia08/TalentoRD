@@ -238,6 +238,11 @@ h3 {
   font-size: 1.28rem;
 }
 
+.goal-strip small {
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
 .section {
   padding: clamp(64px, 9vw, 112px) clamp(18px, 5vw, 72px);
 }
@@ -357,6 +362,52 @@ h3 {
 .forms-heading {
   max-width: 780px;
   margin-bottom: 36px;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.progress-item {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.progress-copy {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.progress-copy span {
+  color: var(--ink-soft);
+  font-weight: 800;
+}
+
+.progress-copy strong {
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
+.progress-track {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--cloud);
+}
+
+.progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green), var(--coral));
 }
 
 .form-grid {
@@ -491,7 +542,8 @@ textarea:focus {
 
   .intro-grid,
   .split,
-  .form-grid {
+  .form-grid,
+  .progress-grid {
     grid-template-columns: 1fr;
   }
 

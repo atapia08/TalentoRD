@@ -29,11 +29,11 @@ Lanzar una landing simple en WordPress.com que permita validar interes, recopila
 
 La idea se considera suficientemente validada si durante la etapa de prueba logra:
 
-- 5,000 talentos registrados.
-- 500 empresas en lista de espera.
+- 10,000 talentos registrados.
+- 1,000 empresas en lista de espera.
 - Identificar 2 o 3 segmentos de talento con mayor demanda.
 - Generar aprendizaje suficiente para decidir si conviene invertir en WordPress.org.
 
 ## Decision de inversion
 
-Antes de escribir una sola linea de codigo, TalentoRD debe demostrar demanda. Si alcanza 5,000 talentos y 500 empresas en lista de espera, habra evidencia suficiente para invertir en el MVP.
+Antes de escribir una sola linea de codigo, TalentoRD debe demostrar demanda. Si alcanza 10,000 talentos y 1,000 empresas en lista de espera, habra evidencia suficiente para invertir en el MVP.

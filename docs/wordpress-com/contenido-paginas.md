@@ -17,7 +17,7 @@ Llamados a la accion:
 
 Meta visible opcional:
 
-- Meta inicial: 5,000 talentos registrados y 500 empresas en lista de espera.
+- Meta inicial: 10,000 talentos registrados y 1,000 empresas en lista de espera.
 
 Secciones de la landing:
 
@@ -98,4 +98,3 @@ Campos:
 Mensaje de confirmacion:
 
 Gracias por unirte a la lista de espera. Tu interes ayuda a validar TalentoRD y entender que tipo de talento necesita el mercado.
-

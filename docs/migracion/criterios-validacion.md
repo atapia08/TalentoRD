@@ -12,8 +12,8 @@
 
 ## Meta principal
 
-- 5,000 talentos registrados.
-- 500 empresas en lista de espera.
+- 10,000 talentos registrados.
+- 1,000 empresas en lista de espera.
 
 ## Preguntas de aprendizaje
 
@@ -34,6 +34,6 @@ Continuar en WordPress.com si:
 Migrar a WordPress.org si:
 
 - Hay traccion clara.
-- Se alcanzan o se aproximan las metas de 5,000 talentos y 500 empresas.
+- Se alcanzan o se aproximan las metas de 10,000 talentos y 1,000 empresas.
 - Los formularios y paginas simples ya no alcanzan.
 - Se necesita directorio, login, CRM, automatizaciones o integraciones.
