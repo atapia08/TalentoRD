@@ -39,6 +39,10 @@ Los registros se guardan localmente en `data/waitlist.json`. Ese archivo esta ig
 
 Detalle tecnico: `docs/desarrollo/contador-real.md`.
 
+Para guardar registros en la base de datos de WordPress, usar el plugin `wordpress-plugin/talentord-waitlist` y la guia `docs/wordpress-com/base-datos-wordpress.md`.
+
+ZIP instalable local: `dist/talentord-waitlist.zip` despues de empaquetar el plugin.
+
 ## Estructura
 
 - `docs/producto/`: vision, alcance, usuarios y propuesta de valor.

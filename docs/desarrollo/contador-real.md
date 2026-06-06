@@ -62,4 +62,4 @@ POST /api/register
 
 ## Nota para produccion
 
-Este almacenamiento en JSON sirve para prototipo local. Para WordPress.com, los datos deben guardarse usando formularios de WordPress.com o una herramienta conectada. Para WordPress.org/hosting propio, conviene mover esto a base de datos, CRM o plugin/formulario con exportacion.
+Este almacenamiento en JSON sirve para prototipo local. Para guardar en WordPress, usar el plugin creado en `wordpress-plugin/talentord-waitlist` y la guia `docs/wordpress-com/base-datos-wordpress.md`.

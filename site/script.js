@@ -1,4 +1,8 @@
 const numberFormatter = new Intl.NumberFormat("en-US");
+const apiEndpoints = window.TALENTORD_ENDPOINTS || {
+  stats: "/api/stats",
+  register: "/api/register",
+};
 
 function getConfirmation(type) {
   if (type === "talento") {
@@ -28,7 +32,7 @@ function updateCounter(type, item) {
 }
 
 async function loadStats() {
-  const response = await fetch("/api/stats", { cache: "no-store" });
+  const response = await fetch(apiEndpoints.stats, { cache: "no-store" });
   if (!response.ok) throw new Error("No se pudo cargar el contador");
 
   const stats = await response.json();
@@ -37,7 +41,7 @@ async function loadStats() {
 }
 
 async function submitRegistration(type, data) {
-  const response = await fetch("/api/register", {
+  const response = await fetch(apiEndpoints.register, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
