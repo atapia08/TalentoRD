@@ -13,6 +13,11 @@ Validar la idea con un sitio manual en WordPress.com antes de invertir en WordPr
 - Crear paginas, menu, formularios y configuraciones con herramientas disponibles en WordPress.com.
 - Medir interes real antes de migrar a WordPress.org.
 
+## Sitio de validacion
+
+- WordPress.com: https://talentordcom.wordpress.com/
+- GitHub: https://github.com/atapia08/TalentoRD
+
 ## Estructura
 
 - `docs/producto/`: vision, alcance, usuarios y propuesta de valor.
@@ -24,4 +29,3 @@ Validar la idea con un sitio manual en WordPress.com antes de invertir en WordPr
 ## Estado
 
 Fase inicial: documentacion base y preparacion del primer sitio validable.
-

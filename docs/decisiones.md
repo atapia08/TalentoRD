@@ -14,3 +14,16 @@ Implicacion:
 
 El repositorio se usara para documentacion, diseno, funcionalidades y preparacion tecnica, no como fuente directa del sitio en esta fase.
 
+## 2026-06-06
+
+Decision:
+
+Conectar operativamente el repositorio GitHub `atapia08/TalentoRD` con el sitio WordPress.com `https://talentordcom.wordpress.com/`.
+
+Motivo:
+
+El sitio WordPress.com sera el ambiente visible de validacion, mientras GitHub mantiene la documentacion, decisiones y trabajo de diseno/desarrollo.
+
+Implicacion:
+
+No se usara GitHub Deployments para este repositorio mientras solo contenga documentacion. Si mas adelante se desarrolla un tema, plugin o componente desplegable, se evaluara la conexion de despliegue segun el plan de WordPress.com.

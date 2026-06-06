@@ -2,11 +2,15 @@
 
 Esta guia describe como construir manualmente la primera version del sitio en WordPress.com.
 
+Sitio de validacion:
+
+- https://talentordcom.wordpress.com/
+
 ## 1. Crear sitio
 
 1. Entrar a WordPress.com.
-2. Crear un nuevo sitio con el nombre TalentoRD.
-3. Elegir un dominio temporal o dominio propio si ya esta disponible.
+2. Usar el sitio `talentordcom.wordpress.com`.
+3. Confirmar que el nombre visible sea TalentoRD.
 4. Seleccionar un tema limpio, moderno y facil de editar.
 
 ## 2. Configurar paginas
@@ -80,4 +84,3 @@ Antes de publicar:
 - Confirmar que los correos llegan.
 - Revisar enlaces del menu.
 - Publicar y compartir con un grupo pequeno para validacion.
-
