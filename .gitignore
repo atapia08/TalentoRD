@@ -1,0 +1,21 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Entornos y dependencias
+node_modules/
+vendor/
+.venv/
+venv/
+
+# Builds y temporales
+dist/
+build/
+tmp/
+*.log
+
+# Configuracion sensible
+.env
+.env.*
+!.env.example
+
