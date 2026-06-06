@@ -27,3 +27,17 @@ El sitio WordPress.com sera el ambiente visible de validacion, mientras GitHub m
 Implicacion:
 
 No se usara GitHub Deployments para este repositorio mientras solo contenga documentacion. Si mas adelante se desarrolla un tema, plugin o componente desplegable, se evaluara la conexion de despliegue segun el plan de WordPress.com.
+
+## 2026-06-06
+
+Decision:
+
+Crear primero una landing page de validacion con dos rutas: `Soy talento` y `Soy empresa`.
+
+Motivo:
+
+Antes de escribir codigo o invertir en un MVP, TalentoRD debe validar si existe demanda real.
+
+Implicacion:
+
+La meta de validacion sera conseguir 5,000 talentos registrados y 500 empresas en lista de espera. Si se alcanza esa evidencia, el proyecto puede justificar inversion en el MVP y posterior migracion a WordPress.org.

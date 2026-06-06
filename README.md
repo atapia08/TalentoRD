@@ -18,6 +18,12 @@ Validar la idea con un sitio manual en WordPress.com antes de invertir en WordPr
 - WordPress.com: https://talentordcom.wordpress.com/
 - GitHub: https://github.com/atapia08/TalentoRD
 
+## Validacion actual
+
+- Landing page: `docs/wordpress-com/landing-validacion.md`
+- Formularios de lista de espera: `docs/wordpress-com/formularios-lista-espera.md`
+- Meta: 5,000 talentos registrados y 500 empresas en lista de espera.
+
 ## Estructura
 
 - `docs/producto/`: vision, alcance, usuarios y propuesta de valor.

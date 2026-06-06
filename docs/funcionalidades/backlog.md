@@ -2,9 +2,11 @@
 
 ## MVP WordPress.com
 
-- Paginas informativas.
-- Formularios de registro.
-- Menu principal.
+- Landing page de validacion.
+- Botones Soy talento y Soy empresa.
+- Formulario de registro de talento.
+- Formulario de lista de espera de empresas.
+- Menu simple o anclas internas.
 - Politica de privacidad.
 - Analitica basica.
 - Pruebas manuales de formularios.
@@ -13,6 +15,7 @@
 
 - Base de datos exportable de registros.
 - Segmentacion de talentos por area.
+- Seguimiento de meta: 5,000 talentos y 500 empresas.
 - Emails de seguimiento.
 - Pagina de preguntas frecuentes.
 - Publicaciones de oportunidades o recursos.
@@ -37,4 +40,3 @@
 - Recomendaciones.
 - Panel para empresas.
 - Sistema de oportunidades.
-

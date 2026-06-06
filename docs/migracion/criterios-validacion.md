@@ -10,6 +10,11 @@
 - Numero de empresas interesadas.
 - Calidad de mensajes recibidos.
 
+## Meta principal
+
+- 5,000 talentos registrados.
+- 500 empresas en lista de espera.
+
 ## Preguntas de aprendizaje
 
 - Que tipo de talento se registra primero?
@@ -29,6 +34,6 @@ Continuar en WordPress.com si:
 Migrar a WordPress.org si:
 
 - Hay traccion clara.
+- Se alcanzan o se aproximan las metas de 5,000 talentos y 500 empresas.
 - Los formularios y paginas simples ya no alcanzan.
 - Se necesita directorio, login, CRM, automatizaciones o integraciones.
-

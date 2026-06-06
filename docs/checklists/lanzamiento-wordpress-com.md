@@ -4,14 +4,14 @@
 
 - [ ] Sitio creado en WordPress.com.
 - [ ] Tema elegido.
-- [ ] Pagina Inicio creada.
-- [ ] Pagina Talentos creada.
-- [ ] Pagina Empresas creada.
-- [ ] Pagina Sobre TalentoRD creada.
-- [ ] Pagina Contacto creada.
+- [ ] Landing page creada.
+- [ ] Hero con texto: "Estamos construyendo la red de talento dominicana."
+- [ ] Boton Soy talento configurado.
+- [ ] Boton Soy empresa configurado.
 - [ ] Formulario de Registro de Talento creado.
 - [ ] Formulario de Empresas y Aliados creado.
-- [ ] Menu principal configurado.
+- [ ] Formularios conectados desde los botones principales.
+- [ ] Meta de validacion documentada: 5,000 talentos y 500 empresas.
 - [ ] Politica de privacidad creada.
 - [ ] Formularios probados.
 - [ ] Confirmaciones de formulario revisadas.
@@ -27,4 +27,3 @@
 - [ ] Identificar segmentos de talento.
 - [ ] Registrar aprendizajes.
 - [ ] Decidir siguiente iteracion.
-

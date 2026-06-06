@@ -1,19 +1,17 @@
 # Alcance MVP
 
-## Objetivo del MVP
+## Objetivo de validacion
 
-Lanzar una version simple en WordPress.com que permita validar interes, recopilar datos y aprender que tipo de talento y oportunidades tienen mayor traccion.
+Lanzar una landing simple en WordPress.com que permita validar interes, recopilar datos y aprender si existe demanda real antes de escribir codigo o invertir en un MVP completo.
 
-## Incluido
+## Incluido en la fase de validacion
 
 - Pagina de inicio.
-- Pagina para talentos.
-- Pagina para empresas.
-- Pagina sobre TalentoRD.
-- Pagina de contacto.
+- Seccion para talentos.
+- Seccion para empresas.
 - Formulario de registro de talento.
 - Formulario de interes para empresas/aliados.
-- Menu principal.
+- Menu simple o botones principales.
 - Configuracion basica de SEO, privacidad y analitica disponible.
 
 ## No incluido por ahora
@@ -25,13 +23,17 @@ Lanzar una version simple en WordPress.com que permita validar interes, recopila
 - Pagos.
 - Desarrollo de tema o plugin personalizado.
 - Hosting propio.
+- Codigo propio.
 
 ## Criterio de exito inicial
 
-El MVP se considera prometedor si durante una primera etapa de prueba logra:
+La idea se considera suficientemente validada si durante la etapa de prueba logra:
 
-- Recibir registros de talentos reales.
-- Recibir al menos algunas solicitudes de empresas, aliados o interesados.
+- 5,000 talentos registrados.
+- 500 empresas en lista de espera.
 - Identificar 2 o 3 segmentos de talento con mayor demanda.
 - Generar aprendizaje suficiente para decidir si conviene invertir en WordPress.org.
 
+## Decision de inversion
+
+Antes de escribir una sola linea de codigo, TalentoRD debe demostrar demanda. Si alcanza 5,000 talentos y 500 empresas en lista de espera, habra evidencia suficiente para invertir en el MVP.

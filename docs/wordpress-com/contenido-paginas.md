@@ -1,60 +1,101 @@
-# Contenido Inicial De Paginas
+# Contenido Inicial De Landing Page
 
 ## Inicio
 
-Titulo sugerido:
+Hero:
 
-TalentoRD
+Estamos construyendo la red de talento dominicana.
 
-Texto principal:
+Texto de apoyo:
 
-Conectamos talento dominicano con oportunidades, empresas y aliados que buscan crecer con personas capaces.
+TalentoRD nace para conectar el talento dominicano con oportunidades, empresas y aliados. Antes de construir una plataforma completa, queremos validar la demanda real y crear una lista de espera con personas y organizaciones interesadas.
 
 Llamados a la accion:
 
 - Soy talento
-- Busco talento
+- Soy empresa
 
-Secciones:
+Meta visible opcional:
 
-- Que es TalentoRD
+- Meta inicial: 5,000 talentos registrados y 500 empresas en lista de espera.
+
+Secciones de la landing:
+
+- Que estamos construyendo
 - Para talentos
 - Para empresas
-- Como participar
+- Por que importa
+- Registro
 
-## Talentos
+## Seccion Para Talentos
 
-Mensaje:
+Titulo:
 
-Si eres profesional, creativo, tecnico, estudiante avanzado o freelancer, queremos conocerte. Registra tu perfil para recibir informacion sobre oportunidades y formar parte de la comunidad inicial de TalentoRD.
+Construye tu reputacion profesional desde Republica Dominicana.
 
-CTA:
+Texto:
+
+Si eres profesional, creativo, tecnico, estudiante avanzado, freelancer o talento emergente, TalentoRD quiere conocerte. Registrate para formar parte de la primera lista de talento dominicano interesado en oportunidades, visibilidad y comunidad.
+
+Boton:
 
 Registrar mi perfil
 
-## Empresas
+## Seccion Para Empresas
 
-Mensaje:
+Titulo:
 
-Si tu empresa, institucion o proyecto necesita encontrar talento dominicano, TalentoRD esta construyendo una red inicial de perfiles listos para nuevas oportunidades.
+Encuentra talento dominicano antes que todos.
 
-CTA:
+Texto:
+
+Si tu empresa, institucion o proyecto necesita talento, unete a la lista de espera. Queremos entender que perfiles buscas, que tan dificil es encontrarlos y que valor tendria una red profesional dominicana confiable.
+
+Boton:
 
 Quiero conocer talento
 
-## Sobre TalentoRD
+## Seccion Por Que Importa
 
-Mensaje:
+Texto:
 
-TalentoRD nace para dar mas visibilidad al talento dominicano y facilitar conexiones utiles entre personas, empresas y aliados. Esta primera version busca validar necesidades reales y aprender con la comunidad.
+TalentoRD.com tiene potencial para convertirse en una marca pais: el lugar donde las personas construyen su reputacion profesional y donde las empresas descubren talento dominicano confiable. Si logramos crear comunidad, el crecimiento no depende solo de publicar proyectos; depende de la red viva dentro de la plataforma.
 
-## Contacto
+## Registro De Talento
 
-Mensaje:
+Campos:
 
-Escribenos si quieres participar, proponer una alianza o conocer mas sobre el proyecto.
+- Nombre completo
+- Correo
+- WhatsApp
+- Ciudad / provincia
+- Area de talento
+- Nivel de experiencia
+- Enlace a LinkedIn, portafolio o CV
+- Tipo de oportunidad que busca
+- Comentario opcional
+- Acepto ser contactado por TalentoRD
 
-CTA:
+Mensaje de confirmacion:
 
-Enviar mensaje
+Gracias por registrarte. Estas en la lista inicial de TalentoRD. Te contactaremos cuando abramos nuevas oportunidades o pruebas de la plataforma.
+
+## Registro De Empresa
+
+Campos:
+
+- Nombre de contacto
+- Empresa / institucion
+- Correo
+- WhatsApp
+- Sector
+- Areas de talento que busca
+- Cantidad aproximada de talento que podria necesitar
+- Principal dificultad al contratar talento
+- Mensaje opcional
+- Acepto ser contactado por TalentoRD
+
+Mensaje de confirmacion:
+
+Gracias por unirte a la lista de espera. Tu interes ayuda a validar TalentoRD y entender que tipo de talento necesita el mercado.
 
