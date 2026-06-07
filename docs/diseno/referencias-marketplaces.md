@@ -4,6 +4,7 @@
 
 - https://www.freelancer.es/
 - https://www.fiverr.com/
+- https://freelancersaasrd.com/login.html?next=projects.html-
 
 ## Patrones utiles
 
@@ -48,8 +49,10 @@ TalentoRD no debe posicionarse como copia de Freelancer o Fiverr. La diferencia 
 ## Elementos a incorporar en la landing
 
 - Rutas principales: `Soy talento` y `Soy empresa`.
-- Contador visible de validacion.
-- Areas iniciales de talento.
-- Mensaje de marca pais.
+- Contador visible de validación.
+- Áreas iniciales de talento.
+- Mensaje de marca país.
 - Formularios simples.
-
+- Barra de confianza con señales concretas.
+- Resumen numérico de registros y empresas.
+- Bloque de tres pasos para explicar cómo entrar temprano a la red.
