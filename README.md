@@ -24,6 +24,7 @@ Validar la idea con un sitio manual en WordPress.com antes de invertir en WordPr
 - Formularios de lista de espera: `docs/wordpress-com/formularios-lista-espera.md`
 - Landing codificada: `site/index.html`
 - Meta: 10,000 talentos registrados y 1,000 empresas en lista de espera.
+- Referencias de marketplaces: `docs/diseno/referencias-marketplaces.md`
 
 ## Vista local
 

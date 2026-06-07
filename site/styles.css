@@ -275,6 +275,39 @@ h3 {
   background: #ffffff;
 }
 
+.categories {
+  background: #ffffff;
+}
+
+.categories-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: start;
+}
+
+.categories-copy h2 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--cloud);
+  font-weight: 850;
+}
+
 .split {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -541,6 +574,7 @@ textarea:focus {
   }
 
   .intro-grid,
+  .categories-inner,
   .split,
   .form-grid,
   .progress-grid {
