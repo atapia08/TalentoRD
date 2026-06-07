@@ -9,7 +9,7 @@ function getConfirmation(type) {
     return "Gracias por registrarte. Ya formas parte de la lista inicial de TalentoRD.";
   }
 
-  return "Gracias por unirte a la lista de espera. Tu interes nos ayuda a validar la demanda real.";
+  return "Gracias por unirte a la lista de espera. Tu interés nos ayuda a validar la demanda real.";
 }
 
 function formatProgress(item) {
@@ -86,6 +86,6 @@ document.querySelectorAll(".signup-form").forEach((form) => {
 
 loadStats().catch(() => {
   document.querySelectorAll(".form-status").forEach((status) => {
-    status.textContent = "El contador real no esta disponible. Revisa que el servidor Node este corriendo.";
+    status.textContent = "El contador real no está disponible. Revisa que el servidor Node esté corriendo.";
   });
 });
