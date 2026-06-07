@@ -9,12 +9,16 @@ Registro de Talento
 Campos:
 
 - Nombre completo: obligatorio
+- Tipo de perfil: obligatorio, persona independiente o empresa de servicios
+- Empresa o marca de servicios: opcional
 - Correo electronico: obligatorio
 - WhatsApp: obligatorio
 - Ciudad / provincia: obligatorio
 - Areas de talento: obligatorio, hasta 10 selecciones
 - Nivel de experiencia: obligatorio
 - LinkedIn, portafolio o CV: opcional
+- Sitio web de la empresa: opcional
+- Tamano del equipo: opcional
 - Tipos de oportunidad que busca: obligatorio, hasta 10 selecciones
 - Comentario adicional: opcional
 - Aceptacion de contacto: obligatorio

@@ -116,10 +116,18 @@ function isValidRegistration(type, data) {
   const company = ["empresa", "sector", "areas", "cantidad", "dificultad", "aceptacion"];
   const required = type === "talento" ? [...common, ...talent] : [...common, ...company];
 
-  return required.every((field) => {
+  const hasRequiredFields = required.every((field) => {
     if (Array.isArray(data[field])) return data[field].length > 0;
     return String(data[field] || "").trim().length > 0;
   });
+
+  if (!hasRequiredFields) return false;
+
+  if (type === "talento" && data.perfil_tipo === "Empresa de servicios") {
+    return String(data.empresa || "").trim().length > 0;
+  }
+
+  return true;
 }
 
 async function handleRegister(request, response) {

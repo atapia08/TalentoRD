@@ -107,7 +107,11 @@ function talentord_waitlist_validate($type, $data) {
     }
 
     if (!is_email($data['correo'])) {
-        return new WP_Error('talentord_invalid_email', 'Correo electronico invalido.', array('status' => 400));
+        return new WP_Error('talentord_invalid_email', 'Correo electrónico inválido.', array('status' => 400));
+    }
+
+    if ($type === 'talento' && !empty($data['perfil_tipo']) && $data['perfil_tipo'] === 'Empresa de servicios' && empty($data['empresa'])) {
+        return new WP_Error('talentord_missing_company_name', 'Escribe el nombre de la empresa o marca de servicios.', array('status' => 400));
     }
 
     return true;
@@ -171,7 +175,7 @@ function talentord_waitlist_insert($type, $data) {
         'talent_area' => $talent_area,
         'experience_level' => $data['experiencia'] ?? null,
         'opportunity_type' => $opportunity_type,
-        'profile_url' => !empty($data['perfil']) ? esc_url_raw($data['perfil']) : null,
+        'profile_url' => !empty($data['sitio_web']) ? esc_url_raw($data['sitio_web']) : (!empty($data['perfil']) ? esc_url_raw($data['perfil']) : null),
         'talent_needs' => $talent_needs,
         'estimated_hires' => $data['cantidad'] ?? null,
         'hiring_challenge' => $hiring_challenge,

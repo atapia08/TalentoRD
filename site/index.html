@@ -211,9 +211,29 @@
           <div class="form-grid">
             <form id="talento-form" class="signup-form" data-type="talento">
               <h3>Soy talento</h3>
+              <fieldset class="profile-type full">
+                <legend>Tipo de perfil</legend>
+                <div class="segmented-options">
+                  <label>
+                    <input name="perfil_tipo" type="radio" value="Persona independiente" checked />
+                    <span>Persona independiente</span>
+                  </label>
+                  <label>
+                    <input name="perfil_tipo" type="radio" value="Empresa de servicios" />
+                    <span>Empresa de servicios</span>
+                  </label>
+                </div>
+                <p class="field-hint">
+                  También puedes registrarte como empresa, estudio, agencia o equipo que ofrece servicios profesionales.
+                </p>
+              </fieldset>
               <label>
-                Nombre completo
+                Nombre de contacto
                 <input name="nombre" type="text" autocomplete="name" required />
+              </label>
+              <label>
+                Empresa o marca de servicios
+                <input name="empresa" type="text" placeholder="Opcional si eres independiente" />
               </label>
               <label>
                 Correo electrónico
@@ -263,6 +283,21 @@
               <label>
                 LinkedIn, portafolio o CV
                 <input name="perfil" type="url" inputmode="url" placeholder="https://" />
+              </label>
+              <label>
+                Sitio web de la empresa
+                <input name="sitio_web" type="url" inputmode="url" placeholder="https://" />
+              </label>
+              <label>
+                Tamaño del equipo
+                <select name="tamano_equipo">
+                  <option value="">Selecciona una opción</option>
+                  <option>Solo yo</option>
+                  <option>2 a 5 personas</option>
+                  <option>6 a 10 personas</option>
+                  <option>11 a 25 personas</option>
+                  <option>Más de 25 personas</option>
+                </select>
               </label>
               <fieldset class="multi-select full" data-max-selected="10">
                 <legend>Tipos de oportunidad</legend>

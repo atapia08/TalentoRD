@@ -115,6 +115,11 @@ document.querySelectorAll(".signup-form").forEach((form) => {
       return;
     }
 
+    if (type === "talento" && data.perfil_tipo === "Empresa de servicios" && !data.empresa) {
+      status.textContent = "Escribe el nombre de la empresa o marca de servicios.";
+      return;
+    }
+
     if (type === "empresa" && (!data.areas || !data.dificultad)) {
       status.textContent = "Selecciona al menos un área de talento y una dificultad.";
       return;

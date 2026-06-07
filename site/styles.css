@@ -623,6 +623,47 @@ textarea:focus {
   background: rgba(238, 245, 242, 0.58);
 }
 
+.profile-type {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid rgba(18, 32, 51, 0.18);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.profile-type legend {
+  padding: 0 6px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.segmented-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.segmented-options label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid rgba(18, 32, 51, 0.16);
+  border-radius: 8px;
+  background: var(--cloud);
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.segmented-options input {
+  width: 18px;
+  min-height: 18px;
+}
+
 .multi-select legend {
   padding: 0 6px;
   color: var(--ink);
@@ -760,6 +801,10 @@ textarea:focus {
   }
 
   .option-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .segmented-options {
     grid-template-columns: 1fr;
   }
 
