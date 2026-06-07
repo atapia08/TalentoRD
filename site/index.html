@@ -268,10 +268,27 @@
                 Sector
                 <input name="sector" type="text" required />
               </label>
-              <label>
-                Áreas de talento que busca
-                <input name="areas" type="text" required />
-              </label>
+              <fieldset class="multi-select full" data-unlimited="true">
+                <legend>Áreas de talento que busca</legend>
+                <p class="field-hint">Seleccione todas las opciones que apliquen.</p>
+                <div class="option-grid">
+                  <label><input name="areas" type="checkbox" value="Tecnología" /> Tecnología</label>
+                  <label><input name="areas" type="checkbox" value="Diseño" /> Diseño</label>
+                  <label><input name="areas" type="checkbox" value="Marketing" /> Marketing</label>
+                  <label><input name="areas" type="checkbox" value="Ventas" /> Ventas</label>
+                  <label><input name="areas" type="checkbox" value="Administración" /> Administración</label>
+                  <label><input name="areas" type="checkbox" value="Finanzas" /> Finanzas</label>
+                  <label><input name="areas" type="checkbox" value="Operaciones" /> Operaciones</label>
+                  <label><input name="areas" type="checkbox" value="Educación" /> Educación</label>
+                  <label><input name="areas" type="checkbox" value="Salud" /> Salud</label>
+                  <label><input name="areas" type="checkbox" value="Legal" /> Legal</label>
+                  <label><input name="areas" type="checkbox" value="Creativo / audiovisual" /> Creativo / audiovisual</label>
+                  <label><input name="areas" type="checkbox" value="Data e IA" /> Data e IA</label>
+                  <label><input name="areas" type="checkbox" value="Consultoría" /> Consultoría</label>
+                  <label><input name="areas" type="checkbox" value="Otro" /> Otro</label>
+                </div>
+                <p class="selection-count" data-selection-count>0 seleccionadas</p>
+              </fieldset>
               <label>
                 Cantidad aproximada
                 <select name="cantidad" required>
@@ -284,19 +301,22 @@
                   <option>Todavía no sé</option>
                 </select>
               </label>
-              <label>
-                Principal dificultad
-                <select name="dificultad" required>
-                  <option value="">Selecciona una opción</option>
-                  <option>Encontrar perfiles calificados</option>
-                  <option>Validar experiencia</option>
-                  <option>Contactar talento disponible</option>
-                  <option>Contratar rápido</option>
-                  <option>Encontrar talento fuera de Santo Domingo</option>
-                  <option>Conocer expectativa salarial</option>
-                  <option>Otro</option>
-                </select>
-              </label>
+              <fieldset class="multi-select full" data-unlimited="true">
+                <legend>Principal dificultad</legend>
+                <p class="field-hint">Seleccione todas las opciones que apliquen.</p>
+                <div class="option-grid">
+                  <label><input name="dificultad" type="checkbox" value="Encontrar perfiles calificados" /> Encontrar perfiles calificados</label>
+                  <label><input name="dificultad" type="checkbox" value="Validar experiencia" /> Validar experiencia</label>
+                  <label><input name="dificultad" type="checkbox" value="Contactar talento disponible" /> Contactar talento disponible</label>
+                  <label><input name="dificultad" type="checkbox" value="Contratar rápido" /> Contratar rápido</label>
+                  <label><input name="dificultad" type="checkbox" value="Encontrar talento fuera de Santo Domingo" /> Encontrar talento fuera de Santo Domingo</label>
+                  <label><input name="dificultad" type="checkbox" value="Conocer expectativa salarial" /> Conocer expectativa salarial</label>
+                  <label><input name="dificultad" type="checkbox" value="Disponibilidad inmediata" /> Disponibilidad inmediata</label>
+                  <label><input name="dificultad" type="checkbox" value="Comparar perfiles" /> Comparar perfiles</label>
+                  <label><input name="dificultad" type="checkbox" value="Otro" /> Otro</label>
+                </div>
+                <p class="selection-count" data-selection-count>0 seleccionadas</p>
+              </fieldset>
               <label class="full">
                 Mensaje adicional
                 <textarea name="mensaje" rows="4"></textarea>

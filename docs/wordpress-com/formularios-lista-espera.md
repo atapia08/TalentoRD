@@ -69,9 +69,9 @@ Campos:
 - Correo electronico: obligatorio
 - WhatsApp: obligatorio
 - Sector: obligatorio
-- Areas de talento que busca: obligatorio
+- Areas de talento que busca: obligatorio, seleccion multiple sin limite
 - Cantidad aproximada de talento que podria necesitar: obligatorio
-- Principal dificultad al contratar talento: obligatorio
+- Principal dificultad al contratar talento: obligatorio, seleccion multiple sin limite
 - Mensaje adicional: opcional
 - Aceptacion de contacto: obligatorio
 

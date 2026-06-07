@@ -47,9 +47,19 @@ function getFormData(form) {
 }
 
 function updateMultiSelectState(group) {
+  const isUnlimited = group.dataset.unlimited === "true";
   const max = Number(group.dataset.maxSelected || 10);
   const checked = [...group.querySelectorAll('input[type="checkbox"]:checked')];
   const count = group.querySelector("[data-selection-count]");
+
+  if (isUnlimited) {
+    count.textContent = `${checked.length} seleccionadas`;
+    count.classList.remove("is-maxed");
+    group.querySelectorAll('input[type="checkbox"]').forEach((input) => {
+      input.disabled = false;
+    });
+    return;
+  }
 
   group.querySelectorAll('input[type="checkbox"]:not(:checked)').forEach((input) => {
     input.disabled = checked.length >= max;
@@ -102,6 +112,11 @@ document.querySelectorAll(".signup-form").forEach((form) => {
 
     if (type === "talento" && (!data.area || !data.oportunidad)) {
       status.textContent = "Selecciona al menos un área de talento y un tipo de oportunidad.";
+      return;
+    }
+
+    if (type === "empresa" && (!data.areas || !data.dificultad)) {
+      status.textContent = "Selecciona al menos un área de talento y una dificultad.";
       return;
     }
 

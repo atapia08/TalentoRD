@@ -67,7 +67,9 @@ function talentord_waitlist_sanitize_payload($payload) {
         }
 
         if (is_array($value)) {
-            $clean[sanitize_key($key)] = array_slice(array_values(array_filter(array_map('sanitize_text_field', $value))), 0, 10);
+            $clean_key = sanitize_key($key);
+            $limit = in_array($clean_key, array('areas', 'dificultad'), true) ? 100 : 10;
+            $clean[$clean_key] = array_slice(array_values(array_filter(array_map('sanitize_text_field', $value))), 0, $limit);
             continue;
         }
 
@@ -99,7 +101,7 @@ function talentord_waitlist_validate($type, $data) {
             return new WP_Error('talentord_missing_field', 'Registro incompleto.', array('status' => 400));
         }
 
-        if (is_array($data[$field]) && count($data[$field]) > 10) {
+        if (is_array($data[$field]) && !in_array($field, array('areas', 'dificultad'), true) && count($data[$field]) > 10) {
             return new WP_Error('talentord_too_many_values', 'Selecciona un máximo de 10 opciones.', array('status' => 400));
         }
     }
@@ -152,6 +154,12 @@ function talentord_waitlist_insert($type, $data) {
         $talent_needs = implode(', ', $talent_needs);
     }
 
+    $hiring_challenge = $data['dificultad'] ?? null;
+
+    if (is_array($hiring_challenge)) {
+        $hiring_challenge = implode(', ', $hiring_challenge);
+    }
+
     $row = array(
         'type' => $type,
         'full_name' => $data['nombre'],
@@ -166,7 +174,7 @@ function talentord_waitlist_insert($type, $data) {
         'profile_url' => !empty($data['perfil']) ? esc_url_raw($data['perfil']) : null,
         'talent_needs' => $talent_needs,
         'estimated_hires' => $data['cantidad'] ?? null,
-        'hiring_challenge' => $data['dificultad'] ?? null,
+        'hiring_challenge' => $hiring_challenge,
         'message' => $data['comentario'] ?? ($data['mensaje'] ?? null),
         'raw_data' => $raw_json,
         'source' => 'landing-rest-api',

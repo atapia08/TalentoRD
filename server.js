@@ -95,7 +95,7 @@ function sanitizeData(data) {
         .filter((item) => typeof item === "string")
         .map((item) => item.trim().slice(0, 1000))
         .filter(Boolean)
-        .slice(0, 10);
+        .slice(0, key === "areas" || key === "dificultad" ? 100 : 10);
       continue;
     }
 
@@ -117,7 +117,7 @@ function isValidRegistration(type, data) {
   const required = type === "talento" ? [...common, ...talent] : [...common, ...company];
 
   return required.every((field) => {
-    if (Array.isArray(data[field])) return data[field].length > 0 && data[field].length <= 10;
+    if (Array.isArray(data[field])) return data[field].length > 0;
     return String(data[field] || "").trim().length > 0;
   });
 }
