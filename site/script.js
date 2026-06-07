@@ -31,6 +31,34 @@ function updateCounter(type, item) {
   });
 }
 
+function getFormData(form) {
+  const data = {};
+
+  new FormData(form).forEach((value, key) => {
+    if (Object.prototype.hasOwnProperty.call(data, key)) {
+      data[key] = Array.isArray(data[key]) ? [...data[key], value] : [data[key], value];
+      return;
+    }
+
+    data[key] = value;
+  });
+
+  return data;
+}
+
+function updateMultiSelectState(group) {
+  const max = Number(group.dataset.maxSelected || 10);
+  const checked = [...group.querySelectorAll('input[type="checkbox"]:checked')];
+  const count = group.querySelector("[data-selection-count]");
+
+  group.querySelectorAll('input[type="checkbox"]:not(:checked)').forEach((input) => {
+    input.disabled = checked.length >= max;
+  });
+
+  count.textContent = `${checked.length}/${max} seleccionadas`;
+  count.classList.toggle("is-maxed", checked.length >= max);
+}
+
 async function loadStats() {
   const response = await fetch(apiEndpoints.stats, { cache: "no-store" });
   if (!response.ok) throw new Error("No se pudo cargar el contador");
@@ -69,19 +97,30 @@ document.querySelectorAll(".signup-form").forEach((form) => {
       return;
     }
 
-    const data = Object.fromEntries(new FormData(form).entries());
+    const data = getFormData(form);
     const type = form.dataset.type;
+
+    if (type === "talento" && (!data.area || !data.oportunidad)) {
+      status.textContent = "Selecciona al menos un área de talento y un tipo de oportunidad.";
+      return;
+    }
 
     status.textContent = "Guardando registro...";
 
     try {
       await submitRegistration(type, data);
       form.reset();
+      form.querySelectorAll(".multi-select").forEach(updateMultiSelectState);
       status.textContent = getConfirmation(type);
     } catch (error) {
       status.textContent = error.message;
     }
   });
+});
+
+document.querySelectorAll(".multi-select").forEach((group) => {
+  updateMultiSelectState(group);
+  group.addEventListener("change", () => updateMultiSelectState(group));
 });
 
 loadStats().catch(() => {

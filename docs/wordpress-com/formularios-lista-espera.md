@@ -12,10 +12,10 @@ Campos:
 - Correo electronico: obligatorio
 - WhatsApp: obligatorio
 - Ciudad / provincia: obligatorio
-- Area de talento: obligatorio
+- Areas de talento: obligatorio, hasta 10 selecciones
 - Nivel de experiencia: obligatorio
 - LinkedIn, portafolio o CV: opcional
-- Tipo de oportunidad que busca: obligatorio
+- Tipos de oportunidad que busca: obligatorio, hasta 10 selecciones
 - Comentario adicional: opcional
 - Aceptacion de contacto: obligatorio
 
@@ -109,4 +109,3 @@ Campos minimos para seguimiento:
 - Fuente de trafico
 - Estado de seguimiento
 - Comentarios internos
-

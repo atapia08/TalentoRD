@@ -66,6 +66,11 @@ function talentord_waitlist_sanitize_payload($payload) {
             continue;
         }
 
+        if (is_array($value)) {
+            $clean[sanitize_key($key)] = array_slice(array_values(array_filter(array_map('sanitize_text_field', $value))), 0, 10);
+            continue;
+        }
+
         if (is_scalar($value)) {
             $clean[sanitize_key($key)] = sanitize_text_field((string) $value);
         }
@@ -92,6 +97,10 @@ function talentord_waitlist_validate($type, $data) {
     foreach (talentord_waitlist_required_fields($type) as $field) {
         if (empty($data[$field])) {
             return new WP_Error('talentord_missing_field', 'Registro incompleto.', array('status' => 400));
+        }
+
+        if (is_array($data[$field]) && count($data[$field]) > 10) {
+            return new WP_Error('talentord_too_many_values', 'Selecciona un máximo de 10 opciones.', array('status' => 400));
         }
     }
 
@@ -127,6 +136,22 @@ function talentord_waitlist_insert($type, $data) {
     $table_name = talentord_waitlist_table_name();
     $raw_json = wp_json_encode($data, JSON_UNESCAPED_UNICODE);
 
+    $talent_area = $data['area'] ?? ($data['areas'] ?? null);
+    $opportunity_type = $data['oportunidad'] ?? null;
+    $talent_needs = $data['areas'] ?? null;
+
+    if (is_array($talent_area)) {
+        $talent_area = implode(', ', $talent_area);
+    }
+
+    if (is_array($opportunity_type)) {
+        $opportunity_type = implode(', ', $opportunity_type);
+    }
+
+    if (is_array($talent_needs)) {
+        $talent_needs = implode(', ', $talent_needs);
+    }
+
     $row = array(
         'type' => $type,
         'full_name' => $data['nombre'],
@@ -135,11 +160,11 @@ function talentord_waitlist_insert($type, $data) {
         'company_name' => $data['empresa'] ?? null,
         'location' => $data['ubicacion'] ?? null,
         'sector' => $data['sector'] ?? null,
-        'talent_area' => $data['area'] ?? ($data['areas'] ?? null),
+        'talent_area' => $talent_area,
         'experience_level' => $data['experiencia'] ?? null,
-        'opportunity_type' => $data['oportunidad'] ?? null,
+        'opportunity_type' => $opportunity_type,
         'profile_url' => !empty($data['perfil']) ? esc_url_raw($data['perfil']) : null,
-        'talent_needs' => $data['areas'] ?? null,
+        'talent_needs' => $talent_needs,
         'estimated_hires' => $data['cantidad'] ?? null,
         'hiring_challenge' => $data['dificultad'] ?? null,
         'message' => $data['comentario'] ?? ($data['mensaje'] ?? null),

@@ -90,6 +90,15 @@ function sanitizeData(data) {
   const clean = {};
 
   for (const [key, value] of Object.entries(data || {})) {
+    if (Array.isArray(value)) {
+      clean[key] = value
+        .filter((item) => typeof item === "string")
+        .map((item) => item.trim().slice(0, 1000))
+        .filter(Boolean)
+        .slice(0, 10);
+      continue;
+    }
+
     if (typeof value === "string") {
       clean[key] = value.trim().slice(0, 1000);
     }
@@ -107,7 +116,10 @@ function isValidRegistration(type, data) {
   const company = ["empresa", "sector", "areas", "cantidad", "dificultad", "aceptacion"];
   const required = type === "talento" ? [...common, ...talent] : [...common, ...company];
 
-  return required.every((field) => String(data[field] || "").trim().length > 0);
+  return required.every((field) => {
+    if (Array.isArray(data[field])) return data[field].length > 0 && data[field].length <= 10;
+    return String(data[field] || "").trim().length > 0;
+  });
 }
 
 async function handleRegister(request, response) {

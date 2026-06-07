@@ -180,24 +180,27 @@
                 Ciudad / provincia
                 <input name="ubicacion" type="text" required />
               </label>
-              <label>
-                Área de talento
-                <select name="area" required>
-                  <option value="">Selecciona una opción</option>
-                  <option>Tecnología</option>
-                  <option>Diseño</option>
-                  <option>Marketing</option>
-                  <option>Ventas</option>
-                  <option>Administración</option>
-                  <option>Finanzas</option>
-                  <option>Operaciones</option>
-                  <option>Educación</option>
-                  <option>Salud</option>
-                  <option>Legal</option>
-                  <option>Creativo / audiovisual</option>
-                  <option>Otro</option>
-                </select>
-              </label>
+              <fieldset class="multi-select full" data-max-selected="10">
+                <legend>Áreas de talento</legend>
+                <p class="field-hint">Selecciona hasta 10 áreas.</p>
+                <div class="option-grid">
+                  <label><input name="area" type="checkbox" value="Tecnología" /> Tecnología</label>
+                  <label><input name="area" type="checkbox" value="Diseño" /> Diseño</label>
+                  <label><input name="area" type="checkbox" value="Marketing" /> Marketing</label>
+                  <label><input name="area" type="checkbox" value="Ventas" /> Ventas</label>
+                  <label><input name="area" type="checkbox" value="Administración" /> Administración</label>
+                  <label><input name="area" type="checkbox" value="Finanzas" /> Finanzas</label>
+                  <label><input name="area" type="checkbox" value="Operaciones" /> Operaciones</label>
+                  <label><input name="area" type="checkbox" value="Educación" /> Educación</label>
+                  <label><input name="area" type="checkbox" value="Salud" /> Salud</label>
+                  <label><input name="area" type="checkbox" value="Legal" /> Legal</label>
+                  <label><input name="area" type="checkbox" value="Creativo / audiovisual" /> Creativo / audiovisual</label>
+                  <label><input name="area" type="checkbox" value="Data e IA" /> Data e IA</label>
+                  <label><input name="area" type="checkbox" value="Consultoría" /> Consultoría</label>
+                  <label><input name="area" type="checkbox" value="Otro" /> Otro</label>
+                </div>
+                <p class="selection-count" data-selection-count>0/10 seleccionadas</p>
+              </fieldset>
               <label>
                 Nivel de experiencia
                 <select name="experiencia" required>
@@ -214,18 +217,23 @@
                 LinkedIn, portafolio o CV
                 <input name="perfil" type="url" inputmode="url" placeholder="https://" />
               </label>
-              <label>
-                Tipo de oportunidad
-                <select name="oportunidad" required>
-                  <option value="">Selecciona una opción</option>
-                  <option>Empleo fijo</option>
-                  <option>Freelance</option>
-                  <option>Práctica / pasantía</option>
-                  <option>Proyecto temporal</option>
-                  <option>Mentoría o comunidad</option>
-                  <option>Visibilidad profesional</option>
-                </select>
-              </label>
+              <fieldset class="multi-select full" data-max-selected="10">
+                <legend>Tipos de oportunidad</legend>
+                <p class="field-hint">Selecciona hasta 10 tipos de oportunidad.</p>
+                <div class="option-grid">
+                  <label><input name="oportunidad" type="checkbox" value="Empleo fijo" /> Empleo fijo</label>
+                  <label><input name="oportunidad" type="checkbox" value="Freelance" /> Freelance</label>
+                  <label><input name="oportunidad" type="checkbox" value="Práctica / pasantía" /> Práctica / pasantía</label>
+                  <label><input name="oportunidad" type="checkbox" value="Proyecto temporal" /> Proyecto temporal</label>
+                  <label><input name="oportunidad" type="checkbox" value="Mentoría o comunidad" /> Mentoría o comunidad</label>
+                  <label><input name="oportunidad" type="checkbox" value="Visibilidad profesional" /> Visibilidad profesional</label>
+                  <label><input name="oportunidad" type="checkbox" value="Trabajo remoto" /> Trabajo remoto</label>
+                  <label><input name="oportunidad" type="checkbox" value="Trabajo híbrido" /> Trabajo híbrido</label>
+                  <label><input name="oportunidad" type="checkbox" value="Tiempo parcial" /> Tiempo parcial</label>
+                  <label><input name="oportunidad" type="checkbox" value="Proyecto internacional" /> Proyecto internacional</label>
+                </div>
+                <p class="selection-count" data-selection-count>0/10 seleccionadas</p>
+              </fieldset>
               <label class="full">
                 Comentario adicional
                 <textarea name="comentario" rows="4"></textarea>

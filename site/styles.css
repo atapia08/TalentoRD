@@ -511,6 +511,60 @@ textarea:focus {
   margin-top: 2px;
 }
 
+.multi-select {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid rgba(18, 32, 51, 0.18);
+  border-radius: 8px;
+  background: rgba(238, 245, 242, 0.58);
+}
+
+.multi-select legend {
+  padding: 0 6px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.field-hint,
+.selection-count {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.option-grid label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid rgba(18, 32, 51, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.option-grid input {
+  width: 18px;
+  min-height: 18px;
+}
+
+.selection-count.is-maxed {
+  color: var(--coral);
+}
+
 .form-status {
   grid-column: 1 / -1;
   min-height: 24px;
@@ -586,6 +640,10 @@ textarea:focus {
   }
 
   .signup-form {
+    grid-template-columns: 1fr;
+  }
+
+  .option-grid {
     grid-template-columns: 1fr;
   }
 
