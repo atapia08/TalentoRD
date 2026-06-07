@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TalentoRD Waitlist
  * Description: Guarda registros de talentos y empresas en una tabla propia y expone endpoints REST para la landing de TalentoRD.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: TalentoRD
  */
 
@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('TALENTORD_WAITLIST_VERSION', '0.1.0');
+define('TALENTORD_WAITLIST_VERSION', '0.1.1');
 define('TALENTORD_WAITLIST_TABLE', 'talentord_waitlist');
 define('TALENTORD_TALENT_GOAL', 10000);
 define('TALENTORD_COMPANY_GOAL', 1000);
@@ -37,13 +37,13 @@ function talentord_waitlist_activate() {
         company_name VARCHAR(190) NULL,
         location VARCHAR(190) NULL,
         sector VARCHAR(190) NULL,
-        talent_area VARCHAR(190) NULL,
+        talent_area TEXT NULL,
         experience_level VARCHAR(120) NULL,
-        opportunity_type VARCHAR(160) NULL,
+        opportunity_type TEXT NULL,
         profile_url TEXT NULL,
         talent_needs TEXT NULL,
         estimated_hires VARCHAR(120) NULL,
-        hiring_challenge VARCHAR(190) NULL,
+        hiring_challenge TEXT NULL,
         message TEXT NULL,
         raw_data LONGTEXT NULL,
         source VARCHAR(120) NOT NULL DEFAULT 'landing',

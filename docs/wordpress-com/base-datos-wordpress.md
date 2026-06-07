@@ -51,6 +51,22 @@ Campos principales:
 - `source`
 - `created_at`
 
+## Mapeo de campos
+
+Formulario de talento:
+
+- `Áreas de talento` se guarda en `talent_area`.
+- `Tipos de oportunidad` se guarda en `opportunity_type`.
+- El formulario completo también se conserva en `raw_data`.
+
+Formulario de empresa:
+
+- `Áreas de talento que busca` se guarda en `talent_needs`.
+- `Principal dificultad` se guarda en `hiring_challenge`.
+- El formulario completo también se conserva en `raw_data`.
+
+Los campos de selección múltiple se guardan como texto separado por comas en sus columnas principales y como estructura completa en `raw_data`.
+
 ## Endpoints
 
 Contador:
@@ -106,4 +122,3 @@ En ese caso, opciones:
 3. Activar el plugin.
 4. Probar `GET /wp-json/talentord/v1/stats`.
 5. Configurar la landing para usar esos endpoints.
-
