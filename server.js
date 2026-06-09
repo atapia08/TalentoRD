@@ -124,7 +124,21 @@ function isValidRegistration(type, data) {
   if (!hasRequiredFields) return false;
 
   if (type === "talento" && data.perfil_tipo === "Empresa de servicios") {
-    return String(data.empresa || "").trim().length > 0;
+    if (!String(data.empresa || "").trim().length) return false;
+  }
+
+  const otherFields = {
+    area: "area_otro",
+    oportunidad: "oportunidad_otro",
+    sector: "sector_otro",
+    areas: "areas_otro",
+    dificultad: "dificultad_otro",
+  };
+
+  for (const [field, otherField] of Object.entries(otherFields)) {
+    const value = data[field];
+    const hasOther = Array.isArray(value) ? value.includes("Otro") : value === "Otro";
+    if (hasOther && !String(data[otherField] || "").trim().length) return false;
   }
 
   return true;

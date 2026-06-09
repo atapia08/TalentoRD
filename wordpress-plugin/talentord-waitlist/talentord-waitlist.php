@@ -114,6 +114,23 @@ function talentord_waitlist_validate($type, $data) {
         return new WP_Error('talentord_missing_company_name', 'Escribe el nombre de la empresa o marca de servicios.', array('status' => 400));
     }
 
+    $other_fields = array(
+        'area' => 'area_otro',
+        'oportunidad' => 'oportunidad_otro',
+        'sector' => 'sector_otro',
+        'areas' => 'areas_otro',
+        'dificultad' => 'dificultad_otro',
+    );
+
+    foreach ($other_fields as $field => $other_field) {
+        $value = $data[$field] ?? null;
+        $has_other = is_array($value) ? in_array('Otro', $value, true) : $value === 'Otro';
+
+        if ($has_other && empty($data[$other_field])) {
+            return new WP_Error('talentord_missing_other_detail', 'Especifica la opción marcada como Otro.', array('status' => 400));
+        }
+    }
+
     return true;
 }
 
@@ -145,23 +162,44 @@ function talentord_waitlist_insert($type, $data) {
     $talent_area = $data['area'] ?? ($data['areas'] ?? null);
     $opportunity_type = $data['oportunidad'] ?? null;
     $talent_needs = $data['areas'] ?? null;
+    $sector = $data['sector'] ?? null;
 
     if (is_array($talent_area)) {
         $talent_area = implode(', ', $talent_area);
+    }
+
+    if (!empty($data['area_otro'])) {
+        $talent_area = trim(($talent_area ? $talent_area . ', ' : '') . 'Otro: ' . $data['area_otro']);
     }
 
     if (is_array($opportunity_type)) {
         $opportunity_type = implode(', ', $opportunity_type);
     }
 
+    if (!empty($data['oportunidad_otro'])) {
+        $opportunity_type = trim(($opportunity_type ? $opportunity_type . ', ' : '') . 'Otro: ' . $data['oportunidad_otro']);
+    }
+
     if (is_array($talent_needs)) {
         $talent_needs = implode(', ', $talent_needs);
+    }
+
+    if (!empty($data['areas_otro'])) {
+        $talent_needs = trim(($talent_needs ? $talent_needs . ', ' : '') . 'Otro: ' . $data['areas_otro']);
+    }
+
+    if ($sector === 'Otro' && !empty($data['sector_otro'])) {
+        $sector = 'Otro: ' . $data['sector_otro'];
     }
 
     $hiring_challenge = $data['dificultad'] ?? null;
 
     if (is_array($hiring_challenge)) {
         $hiring_challenge = implode(', ', $hiring_challenge);
+    }
+
+    if (!empty($data['dificultad_otro'])) {
+        $hiring_challenge = trim(($hiring_challenge ? $hiring_challenge . ', ' : '') . 'Otro: ' . $data['dificultad_otro']);
     }
 
     $row = array(
@@ -171,7 +209,7 @@ function talentord_waitlist_insert($type, $data) {
         'whatsapp' => $data['whatsapp'],
         'company_name' => $data['empresa'] ?? null,
         'location' => $data['ubicacion'] ?? null,
-        'sector' => $data['sector'] ?? null,
+        'sector' => $sector,
         'talent_area' => $talent_area,
         'experience_level' => $data['experiencia'] ?? null,
         'opportunity_type' => $opportunity_type,

@@ -15,11 +15,13 @@ Campos:
 - WhatsApp: obligatorio
 - Ciudad / provincia: obligatorio, lista desplegable
 - Areas de talento: obligatorio, hasta 10 selecciones
+- Si selecciona Otro en areas de talento, debe especificar el detalle.
 - Nivel de experiencia: obligatorio
 - LinkedIn, portafolio o CV: opcional
 - Sitio web de la empresa: opcional
 - Tamano del equipo: opcional
 - Tipos de oportunidad que busca: obligatorio, hasta 10 selecciones
+- Si selecciona Otro en tipos de oportunidad, debe especificar el detalle.
 - Comentario adicional: opcional
 - Aceptacion de contacto: obligatorio
 
@@ -73,9 +75,12 @@ Campos:
 - Correo electronico: obligatorio
 - WhatsApp: obligatorio
 - Sector: obligatorio, lista desplegable
+- Si selecciona Otro en sector, debe especificar el detalle.
 - Areas de talento que busca: obligatorio, seleccion multiple sin limite
+- Si selecciona Otro en areas de talento que busca, debe especificar el detalle.
 - Cantidad aproximada de talento que podria necesitar: obligatorio
 - Principal dificultad al contratar talento: obligatorio, seleccion multiple sin limite
+- Si selecciona Otro en principal dificultad, debe especificar el detalle.
 - Mensaje adicional: opcional
 - Aceptacion de contacto: obligatorio
 

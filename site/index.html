@@ -299,6 +299,10 @@
                 </div>
                 <p class="selection-count" data-selection-count>0/10 seleccionadas</p>
               </fieldset>
+              <label class="other-field full" data-other-field-for="area" hidden>
+                Especificar otra área de talento
+                <input name="area_otro" type="text" />
+              </label>
               <label>
                 Nivel de experiencia
                 <select name="experiencia" required>
@@ -356,9 +360,14 @@
                   <label><input name="oportunidad" type="checkbox" value="Trabajo híbrido" /> Trabajo híbrido</label>
                   <label><input name="oportunidad" type="checkbox" value="Tiempo parcial" /> Tiempo parcial</label>
                   <label><input name="oportunidad" type="checkbox" value="Proyecto internacional" /> Proyecto internacional</label>
+                  <label><input name="oportunidad" type="checkbox" value="Otro" /> Otro</label>
                 </div>
                 <p class="selection-count" data-selection-count>0/10 seleccionadas</p>
               </fieldset>
+              <label class="other-field full" data-other-field-for="oportunidad" hidden>
+                Especificar otro tipo de oportunidad
+                <input name="oportunidad_otro" type="text" />
+              </label>
               <label class="full">
                 Comentario adicional
                 <textarea name="comentario" rows="4"></textarea>
@@ -409,6 +418,10 @@
                   <option>Otro</option>
                 </select>
               </label>
+              <label class="other-field full" data-other-field-for="sector" hidden>
+                Especificar otro sector
+                <input name="sector_otro" type="text" />
+              </label>
               <fieldset class="multi-select full" data-unlimited="true">
                 <legend>Áreas de talento que busca</legend>
                 <p class="field-hint">Seleccione todas las opciones que apliquen.</p>
@@ -430,6 +443,10 @@
                 </div>
                 <p class="selection-count" data-selection-count>0 seleccionadas</p>
               </fieldset>
+              <label class="other-field full" data-other-field-for="areas" hidden>
+                Especificar otra área de talento
+                <input name="areas_otro" type="text" />
+              </label>
               <label>
                 Cantidad aproximada
                 <select name="cantidad" required>
@@ -458,6 +475,10 @@
                 </div>
                 <p class="selection-count" data-selection-count>0 seleccionadas</p>
               </fieldset>
+              <label class="other-field full" data-other-field-for="dificultad" hidden>
+                Especificar otra dificultad
+                <input name="dificultad_otro" type="text" />
+              </label>
               <label class="full">
                 Mensaje adicional
                 <textarea name="mensaje" rows="4"></textarea>

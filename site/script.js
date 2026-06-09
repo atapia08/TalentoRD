@@ -83,6 +83,27 @@ function updateProfileTypeState(form) {
   });
 }
 
+function hasOtherSelected(form, fieldName) {
+  const values = form.querySelectorAll(`[name="${fieldName}"]`);
+
+  return [...values].some((field) => {
+    if (field.type === "checkbox" || field.type === "radio") return field.checked && field.value === "Otro";
+    return field.value === "Otro";
+  });
+}
+
+function updateOtherFields(form) {
+  form.querySelectorAll("[data-other-field-for]").forEach((wrapper) => {
+    const sourceName = wrapper.dataset.otherFieldFor;
+    const input = wrapper.querySelector("input, textarea, select");
+    const shouldShow = hasOtherSelected(form, sourceName);
+
+    wrapper.hidden = !shouldShow;
+    input.required = shouldShow;
+    if (!shouldShow) input.value = "";
+  });
+}
+
 async function loadStats() {
   const response = await fetch(apiEndpoints.stats, { cache: "no-store" });
   if (!response.ok) throw new Error("No se pudo cargar el contador");
@@ -145,6 +166,7 @@ document.querySelectorAll(".signup-form").forEach((form) => {
       await submitRegistration(type, data);
       form.reset();
       updateProfileTypeState(form);
+      updateOtherFields(form);
       form.querySelectorAll(".multi-select").forEach(updateMultiSelectState);
       status.textContent = getConfirmation(type);
     } catch (error) {
@@ -162,6 +184,13 @@ document.querySelectorAll("#talento-form").forEach((form) => {
   updateProfileTypeState(form);
   form.querySelectorAll('input[name="perfil_tipo"]').forEach((input) => {
     input.addEventListener("change", () => updateProfileTypeState(form));
+  });
+});
+
+document.querySelectorAll(".signup-form").forEach((form) => {
+  updateOtherFields(form);
+  form.querySelectorAll('input[type="checkbox"], input[type="radio"], select').forEach((field) => {
+    field.addEventListener("change", () => updateOtherFields(form));
   });
 });
 
