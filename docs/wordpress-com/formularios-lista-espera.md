@@ -72,7 +72,7 @@ Campos:
 - Empresa / institucion: obligatorio
 - Correo electronico: obligatorio
 - WhatsApp: obligatorio
-- Sector: obligatorio
+- Sector: obligatorio, lista desplegable
 - Areas de talento que busca: obligatorio, seleccion multiple sin limite
 - Cantidad aproximada de talento que podria necesitar: obligatorio
 - Principal dificultad al contratar talento: obligatorio, seleccion multiple sin limite
