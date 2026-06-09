@@ -232,10 +232,6 @@
                 <input name="nombre" type="text" autocomplete="name" required />
               </label>
               <label>
-                Empresa o marca de servicios
-                <input name="empresa" type="text" placeholder="Opcional si eres independiente" />
-              </label>
-              <label>
                 Correo electrónico
                 <input name="correo" type="email" autocomplete="email" required />
               </label>
@@ -319,21 +315,33 @@
                 LinkedIn, portafolio o CV
                 <input name="perfil" type="url" inputmode="url" placeholder="https://" />
               </label>
-              <label>
-                Sitio web de la empresa
-                <input name="sitio_web" type="url" inputmode="url" placeholder="https://" />
-              </label>
-              <label>
-                Tamaño del equipo
-                <select name="tamano_equipo">
-                  <option value="">Selecciona una opción</option>
-                  <option>Solo yo</option>
-                  <option>2 a 5 personas</option>
-                  <option>6 a 10 personas</option>
-                  <option>11 a 25 personas</option>
-                  <option>Más de 25 personas</option>
-                </select>
-              </label>
+              <fieldset class="service-company-fields full" data-service-company-fields hidden>
+                <legend>Datos de la empresa de servicios</legend>
+                <p class="field-hint">
+                  Completa estos datos si te registras como agencia, estudio, firma o equipo proveedor.
+                </p>
+                <div class="service-company-grid">
+                  <label>
+                    Empresa o marca de servicios
+                    <input name="empresa" type="text" data-service-company-required />
+                  </label>
+                  <label>
+                    Sitio web de la empresa
+                    <input name="sitio_web" type="url" inputmode="url" placeholder="https://" />
+                  </label>
+                  <label>
+                    Tamaño del equipo
+                    <select name="tamano_equipo" data-service-company-required>
+                      <option value="">Selecciona una opción</option>
+                      <option>Solo yo</option>
+                      <option>2 a 5 personas</option>
+                      <option>6 a 10 personas</option>
+                      <option>11 a 25 personas</option>
+                      <option>Más de 25 personas</option>
+                    </select>
+                  </label>
+                </div>
+              </fieldset>
               <fieldset class="multi-select full" data-max-selected="10">
                 <legend>Tipos de oportunidad</legend>
                 <p class="field-hint">Selecciona hasta 10 tipos de oportunidad.</p>

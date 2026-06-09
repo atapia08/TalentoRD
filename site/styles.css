@@ -664,6 +664,33 @@ textarea:focus {
   min-height: 18px;
 }
 
+.service-company-fields {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid rgba(31, 138, 101, 0.34);
+  border-radius: 8px;
+  background: rgba(31, 138, 101, 0.08);
+}
+
+.service-company-fields[hidden] {
+  display: none;
+}
+
+.service-company-fields legend {
+  padding: 0 6px;
+  color: var(--green-dark);
+  font-size: 0.9rem;
+  font-weight: 950;
+}
+
+.service-company-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .multi-select legend {
   padding: 0 6px;
   color: var(--ink);
@@ -805,6 +832,10 @@ textarea:focus {
   }
 
   .segmented-options {
+    grid-template-columns: 1fr;
+  }
+
+  .service-company-grid {
     grid-template-columns: 1fr;
   }
 

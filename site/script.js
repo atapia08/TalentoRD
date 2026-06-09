@@ -69,6 +69,20 @@ function updateMultiSelectState(group) {
   count.classList.toggle("is-maxed", checked.length >= max);
 }
 
+function updateProfileTypeState(form) {
+  const selectedType = form.querySelector('input[name="perfil_tipo"]:checked')?.value;
+  const companyFields = form.querySelector("[data-service-company-fields]");
+  const isServiceCompany = selectedType === "Empresa de servicios";
+
+  if (!companyFields) return;
+
+  companyFields.hidden = !isServiceCompany;
+  companyFields.querySelectorAll("[data-service-company-required]").forEach((field) => {
+    field.required = isServiceCompany;
+    if (!isServiceCompany) field.value = "";
+  });
+}
+
 async function loadStats() {
   const response = await fetch(apiEndpoints.stats, { cache: "no-store" });
   if (!response.ok) throw new Error("No se pudo cargar el contador");
@@ -130,6 +144,7 @@ document.querySelectorAll(".signup-form").forEach((form) => {
     try {
       await submitRegistration(type, data);
       form.reset();
+      updateProfileTypeState(form);
       form.querySelectorAll(".multi-select").forEach(updateMultiSelectState);
       status.textContent = getConfirmation(type);
     } catch (error) {
@@ -141,6 +156,13 @@ document.querySelectorAll(".signup-form").forEach((form) => {
 document.querySelectorAll(".multi-select").forEach((group) => {
   updateMultiSelectState(group);
   group.addEventListener("change", () => updateMultiSelectState(group));
+});
+
+document.querySelectorAll("#talento-form").forEach((form) => {
+  updateProfileTypeState(form);
+  form.querySelectorAll('input[name="perfil_tipo"]').forEach((input) => {
+    input.addEventListener("change", () => updateProfileTypeState(form));
+  });
 });
 
 loadStats().catch(() => {
