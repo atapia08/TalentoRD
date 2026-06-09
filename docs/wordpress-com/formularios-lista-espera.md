@@ -13,7 +13,7 @@ Campos:
 - Empresa o marca de servicios: opcional
 - Correo electronico: obligatorio
 - WhatsApp: obligatorio
-- Ciudad / provincia: obligatorio
+- Ciudad / provincia: obligatorio, lista desplegable
 - Areas de talento: obligatorio, hasta 10 selecciones
 - Nivel de experiencia: obligatorio
 - LinkedIn, portafolio o CV: opcional
